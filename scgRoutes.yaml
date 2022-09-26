@@ -82,6 +82,7 @@ spec:
     - RateLimit=2,5s
     tags:
     - catalog
+    uri: http://acme-catalog
   - predicates:
     - Path=/products/{id}
     - Method=GET
@@ -89,6 +90,7 @@ spec:
     - StripPrefix=0
     tags:
     - catalog
+    uri: http://acme-catalog
   - predicates:
     - Path=/catalogliveness
     - Method=GET
@@ -97,6 +99,7 @@ spec:
     - SetPath=/actuator/health/liveness
     tags:
     - catalog
+    uri: http://acme-catalog
   - predicates:
     - Path=/static/images/{id}
     - Method=GET
@@ -104,8 +107,7 @@ spec:
     - StripPrefix=0
     tags:
     - catalog
-  service:
-    name: acme-catalog
+    uri: http://acme-catalog
 ---
 apiVersion: "tanzu.vmware.com/v1"
 kind: SpringCloudGatewayMapping
@@ -163,6 +165,7 @@ spec:
     - RedirectTo=302, /
     tags:
     - sso
+    uri: http://acme-identity
   - ssoEnabled: true
     tokenRelay: true
     predicates:
@@ -173,6 +176,7 @@ spec:
     - SetResponseHeader=Cache-Control, no-store
     tags:
     - users
+    uri: http://acme-identity
   - uri: no://op
     predicates:
     - Path=/verify-token
@@ -189,8 +193,7 @@ spec:
     - StripPrefix=0
     tags:
     - users
-  service:
-    name: acme-identity
+    uri: http://acme-identity
 ---
 apiVersion: "tanzu.vmware.com/v1"
 kind: SpringCloudGatewayMapping
