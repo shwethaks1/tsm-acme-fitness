@@ -10,7 +10,7 @@ spec:
     istio: ingressgateway
   servers:
   - hosts:
-    - #@ 'authserver' + data.values.appDomainName
+    - #@ 'authserver.' + data.values.appDomainName
     port:
       name: http
       number: 80
