@@ -10,7 +10,7 @@ spec:
     istio: ingressgateway
   servers:
   - hosts:
-    - authserver.tsmdemo.perfect300rock.com
+    - #@ 'authserver' + data.values.appDomainName
     port:
       name: http
       number: 80
@@ -59,7 +59,7 @@ spec:
   gateways:
   - api-gateway
   hosts:
-  - acme-fitness.tsmdemo.perfect300rock.com
+  - #@ 'acme-fitness.' + data.values.appDomainName
   http:
   - match:
     - port: 80
