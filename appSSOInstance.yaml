@@ -24,10 +24,10 @@
 apiVersion: sso.apps.tanzu.vmware.com/v1alpha1
 kind: AuthServer
 metadata:
-  name: #@ data.values.appSSOName
+  name: appsso-acme-fitness
   namespace: #@ data.values.workloadNamespace
   labels:
-    name: #@ data.values.appSSOName
+    name: appsso-acme-fitness
     app: acme-fitness    
   annotations:
     sso.apps.tanzu.vmware.com/allow-client-namespaces: "*"
@@ -38,13 +38,13 @@ spec:
     disabled: true
   tokenSignature:
     signAndVerifyKeyRef:
-      name: #@ data.values.appSSOName +"-signing-key"
+      name: #@ 'appsso-acme-fitness' +"-signing-key"
   identityProviders: #@ buildIdentityProviders()
 ---
 apiVersion: secretgen.k14s.io/v1alpha1
 kind: RSAKey
 metadata:
-  name: #@ data.values.appSSOName + "-signing-key"
+  name: #@ 'appsso-acme-fitness' + "-signing-key"
   namespace: #@ data.values.workloadNamespace
 spec:
   secretTemplate:
