@@ -31,7 +31,7 @@ spec:
     - port: 80
     route:
     - destination:
-        host: appsso-acme-fitness
+        host: appsso-acme-fitness-auth-server
         port:
 ---
 apiVersion: networking.istio.io/v1beta1
