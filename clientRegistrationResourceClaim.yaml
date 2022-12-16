@@ -8,7 +8,7 @@ metadata:
 spec:
    authServerSelector:
       matchLabels:
-         name: #@ data.values.appSSOName
+         name: appsso-acme-fitness
    redirectURIs: 
      - #@ data.values.appSSORedirectURI
    requireUserConsent: false
