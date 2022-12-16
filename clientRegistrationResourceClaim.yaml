@@ -73,7 +73,7 @@ spec:
 apiVersion: services.apps.tanzu.vmware.com/v1alpha1
 kind: ResourceClaim
 metadata:
-  name: #@ data.values.appSSOName
+  name: appsso-acme-fitness
   namespace: #@ data.values.workloadNamespace
 spec:
   ref:
