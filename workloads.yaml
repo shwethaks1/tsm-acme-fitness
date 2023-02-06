@@ -68,7 +68,7 @@ spec:
   source:
     subPath: apps/acme-order
     git:
-      url: https://github.com/gm2552/acme-fitness-store
+      url: https://github.com/shwethaks1/acme-app
       ref:
         branch: main
 ---
