@@ -145,7 +145,7 @@ metadata:
   namespace: #@ data.values.workloadNamespace
   labels:
     apps.tanzu.vmware.com/workload-type: server
-    apps.tanzu.vmware.com/has-tests: "false"
+    apps.tanzu.vmware.com/has-tests: "true"
     app.kubernetes.io/part-of: acme-fitness-store
 spec:
   env:
