@@ -9,6 +9,7 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: server
     app.kubernetes.io/part-of: acme-fitness-store
+    apps.tanzu.vmware.com/has-tests: "true"
 spec:
   env:
   - name: CART_PORT
@@ -50,6 +51,7 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: server
     app.kubernetes.io/part-of: acme-fitness-store
+    apps.tanzu.vmware.com/has-tests: "true"
 spec:
   env:
   - name: AcmeServiceSettings__AuthUrl
@@ -80,6 +82,7 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: server
     app.kubernetes.io/part-of: acme-fitness-store
+    apps.tanzu.vmware.com/has-tests: "true"
 spec:
   env:
   - name: PORT
@@ -118,6 +121,7 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: server
     app.kubernetes.io/part-of: acme-fitness-store
+    apps.tanzu.vmware.com/has-tests: "true"
 spec:
   env:
   - name: JWK_URI
@@ -179,6 +183,7 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: server
     app.kubernetes.io/part-of: acme-fitness-store
+    apps.tanzu.vmware.com/has-tests: "true"
 spec:
   params:
   - name: annotations
