@@ -50,7 +50,6 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: server
     app.kubernetes.io/part-of: acme-fitness-store
-    networking.knative.dev/visibility: cluster-local
 spec:
   env:
   - name: AcmeServiceSettings__AuthUrl
