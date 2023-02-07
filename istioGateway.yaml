@@ -25,7 +25,7 @@ spec:
   gateways:
   - authserver
   hosts:
-  - #@ 'appsso-acme-fitness.' + data.values.workloadNamespace + '.' data.values.appDomainName
+  - #@ 'appsso-acme-fitness.' + data.values.workloadNamespace + '.' + data.values.appDomainName
   http:
   - match:
     - port: 80
